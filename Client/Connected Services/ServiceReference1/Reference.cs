@@ -39,6 +39,7 @@ namespace Client.ServiceReference1 {
         System.Threading.Tasks.Task<Server.Computer[]> GetComputersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/DeleteComputer", ReplyAction="http://tempuri.org/IContract/DeleteComputerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Server.SQLError), Action="http://tempuri.org/IContract/DeleteComputerSQLErrorFault", Name="SQLError", Namespace="http://schemas.datacontract.org/2004/07/Server")]
         void DeleteComputer(Server.Computer comp);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IContract/DeleteComputer", ReplyAction="http://tempuri.org/IContract/DeleteComputerResponse")]

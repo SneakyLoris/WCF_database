@@ -46,6 +46,9 @@
   <wsdl:message name="IContract_DeleteComputer_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteComputerResponse" />
   </wsdl:message>
+  <wsdl:message name="IContract_DeleteComputer_SQLErrorFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Server" name="detail" element="q6:SQLError" />
+  </wsdl:message>
   <wsdl:portType name="IContract">
     <wsdl:operation name="AddComputer">
       <wsdl:input wsaw:Action="http://tempuri.org/IContract/AddComputer" message="tns:IContract_AddComputer_InputMessage" />
@@ -67,6 +70,7 @@
     <wsdl:operation name="DeleteComputer">
       <wsdl:input wsaw:Action="http://tempuri.org/IContract/DeleteComputer" message="tns:IContract_DeleteComputer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IContract/DeleteComputerResponse" message="tns:IContract_DeleteComputer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContract/DeleteComputerSQLErrorFault" name="SQLErrorFault" message="tns:IContract_DeleteComputer_SQLErrorFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IContract" type="tns:IContract">
@@ -121,6 +125,9 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="SQLErrorFault">
+        <soap:fault use="literal" name="SQLErrorFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service">

@@ -24,7 +24,7 @@ namespace Server
     }
 
     [DataContract]
-    public class Computer : INotifyPropertyChanged
+    public class Computer 
     {
         private int id;
         private string name;
@@ -38,15 +38,10 @@ namespace Server
         private bool os;
 
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         [DataMember]
         [DisplayName("ID компьютера")]
-        public int ID { get { return id; } set { id = value; OnPropertyChanged(nameof(ID)); } }
+        public int ID { get { return id; } set { id = value;} }
 
         [DataMember]
         [DisplayName("Название")]
@@ -61,7 +56,6 @@ namespace Server
                     throw new FaultException<ValueError>(new("Название", value, correct), "Проблемс", new FaultCode("ValueError"));
                 }
                 name = value;
-                OnPropertyChanged(nameof(Name));
             }
         }
 
@@ -78,7 +72,6 @@ namespace Server
                     //throw new FaultException<ValueError>(new("Название процессора", value, correct), "Проблемс", new FaultCode("ValueError"));
                 }
                 CPU_name = value;
-                OnPropertyChanged(nameof(CPU));
             }
         }
 
@@ -95,7 +88,6 @@ namespace Server
                     //throw new FaultException<ValueError>(new("Название выдеокарты", value, correct), "Проблемс", new FaultCode("ValueError"));
                 }
                 GPU_name = value;
-                OnPropertyChanged(nameof(GPU));
             }
         }
 
@@ -111,25 +103,24 @@ namespace Server
                     //throw new FaultException<ValueError>(new("Название материнской платы", value, correct), "Проблемс", new FaultCode("ValueError"));
                 }
                 motherboard = value;
-                OnPropertyChanged(nameof(Motherboard));
             }
         }
         
         [DataMember]
         [DisplayName("Мощность блока питания")]
-        public int Power { get { return power; } set { power = value; OnPropertyChanged(nameof(Power)); } }
+        public int Power { get { return power; } set { power = value; } }
 
         [DataMember]
         [DisplayName("Общая память компьютера")]
-        public int Memory { get { return memory; } set { memory = value; OnPropertyChanged(nameof(Memory)); } }
+        public int Memory { get { return memory; } set { memory = value; } }
 
         [DataMember]
         [DisplayName("Наличие SSD")]
-        public bool SSD { get { return ssd; } set { ssd = value; OnPropertyChanged(nameof(SSD)); } }
+        public bool SSD { get { return ssd; } set { ssd = value; } }
 
         [DataMember]
         [DisplayName("Наличие HDD")]
-        public bool HDD { get { return hdd; } set { hdd = value; OnPropertyChanged(nameof(HDD)); } }
+        public bool HDD { get { return hdd; } set { hdd = value; } }
 
 
 
@@ -138,7 +129,7 @@ namespace Server
         public bool OS { 
             get => os; 
             set {
-                os = value; OnPropertyChanged(nameof(OS));
+                os = value;
             } 
         }
 

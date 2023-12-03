@@ -86,19 +86,5 @@ namespace Client
                 MessageBox.Show($"{ex.Detail.Description}\n{ex.Detail.Command}\n{ex.Detail.Connection}", "O_oooo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        /*private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Сохранить изменения?", "O_o", MessageBoxButtons.YesNoCancel);
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.SaveDB(sender, e);
-                DialogResult = DialogResult.Cancel;
-            }
-            else if (dialogResult == DialogResult.No)
-                DialogResult = DialogResult.Cancel;
-            else e.Cancel = true;
-
-        }*/
     }
 }
