@@ -31,6 +31,7 @@ namespace Client
             EditForm edit = new(client, comp, 0);
             edit.ShowDialog(this);
 
+            // уточнить что вводить вместо sender и e
             this.ReadDB(sender, e);
         }
 
@@ -43,6 +44,8 @@ namespace Client
                 Computer copy = _values[(int)curr].Copy();
                 EditForm edit = new(client, copy, 1);
                 edit.ShowDialog(this);
+
+                this.ReadDB(sender, e);
 
             }
             else

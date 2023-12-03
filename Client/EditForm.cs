@@ -16,13 +16,12 @@ using System.Windows.Forms;
 
  
  */
-// Кавычки зло
 namespace Client
 {
     public partial class EditForm : Form
     {
         private Computer comp;
-        private int mod;// 1 - Изменить, 0 - Добавить
+        private int mod; // 1 - Изменение, 0 - Добавить
         private ServiceReference1.ContractClient client;
 
         public EditForm(ServiceReference1.ContractClient _client, Computer _comp, int _mod)
@@ -35,11 +34,9 @@ namespace Client
             if (mod == 1)
             {
                 id.ReadOnly = true;
-                id.InterceptArrowKeys = false;
+                id.Enabled = false;
             }
 
-            // Убрал биндинги, потому что ошибка не обрабатывается на клиенте
-            
             comp = _comp;
 
             id.Value = comp.ID;
