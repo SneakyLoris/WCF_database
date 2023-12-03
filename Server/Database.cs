@@ -10,10 +10,8 @@ using System.Runtime.Serialization;
 
 namespace Server
 {
-    // static
     public static class Database
     {
-        // private string stringConn = "";
         private static SqlConnection conn;
 
         public static bool Connect(string connStr)
@@ -25,7 +23,7 @@ namespace Server
             }
             catch
             {
-                throw new FaultException<SQLError>(new SQLError("", conn.ConnectionString), "ExecutePC failed", new FaultCode("SQLError"));
+                throw new FaultException<SQLError>(new SQLError("", conn.ConnectionString), "Connection failed", new FaultCode("SQLError"));
             }
 
         }
@@ -33,15 +31,13 @@ namespace Server
         {
             int res = 0;
 
-            // Думаю не очень это все
-            // Получается отлавливаю неправильную ошибку и отправляю правильную
             try
             {
                 conn.Open();
             }
             catch (Exception)
             {
-                throw new FaultException<SQLError>(new SQLError(cmd.CommandText, conn.ConnectionString), "ExecutePC failed", new FaultCode("SQLError"));
+                throw new FaultException<SQLError>(new SQLError(cmd.CommandText, conn.ConnectionString), "Connection failed", new FaultCode("SQLError"));
             }
 
             try
@@ -72,7 +68,7 @@ namespace Server
             }
             catch (Exception)
             {
-                throw new FaultException<SQLError>(new SQLError(cmd.CommandText, conn.ConnectionString), "ExecutePC failed", new FaultCode("SQLError"));
+                throw new FaultException<SQLError>(new SQLError(cmd.CommandText, conn.ConnectionString), "Connection failed", new FaultCode("SQLError"));
             }
 
             try
@@ -107,7 +103,7 @@ namespace Server
             }
             catch
             {
-                throw new FaultException<SQLError>(new SQLError(cmd.CommandText, conn.ConnectionString), "Read Error", new FaultCode("SQLError"));
+                throw new FaultException<SQLError>(new SQLError(cmd.CommandText, conn.ConnectionString), "Read DB failed", new FaultCode("SQLError"));
             }
             conn.Close();
         }
@@ -183,8 +179,8 @@ namespace Server
         public SQLError(string cmd, string cnn = "null", string dsc = "Ошибка подключения")
         {
             Description = dsc;
-            Command = $"Command: {cmd}";
-            Connection = $"Connection string: {cnn}";
+            Command = $"COMMAND: {cmd}";
+            Connection = $"CONNECTION STRING: {cnn}";
         }
         public SQLError()
         {

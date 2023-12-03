@@ -28,6 +28,7 @@ namespace Server
         [OperationContract]
         BindingList<Computer> GetComputers(); //ok
 
+        [FaultContract(typeof(SQLError))]
         [OperationContract]
         void DeleteComputer(Computer comp); // ok
 

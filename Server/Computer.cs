@@ -16,7 +16,7 @@ namespace Server
     {
         public static string Filter(this string str)
         {
-            List<char> charsToRemove = new List<char>() { '"', '_', ',', '.', ';', ':', '\u0027' };
+            List<char> charsToRemove = new List<char>() { '"', '_', ',', '.', ';', ':', '\u0027' }; // кавычка в юникоде
 
             String chars = "[" + String.Concat(charsToRemove) + "]";
             return Regex.Replace(str, chars, String.Empty);
@@ -205,7 +205,7 @@ namespace Server
         }
         public ValueError(string name, string err, string right)
         {
-            nameValue = $"Строка с ошибкой: {name}";
+            nameValue = $"Строка с ошибкой: '{name}'";
             errString = $"Неправильная строка: {err}";
             haveToBe = $"Возможное исправление: {right}";
         }

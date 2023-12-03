@@ -21,7 +21,7 @@ namespace Client
     public partial class EditForm : Form
     {
         private Computer comp;
-        private int mod; // 1 - Изменение, 0 - Добавить
+        private int mod; // 1 - Изменение, 0 - Добавление
         private ServiceReference1.ContractClient client;
 
         public EditForm(ServiceReference1.ContractClient _client, Computer _comp, int _mod)
