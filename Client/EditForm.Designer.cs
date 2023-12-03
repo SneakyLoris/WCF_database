@@ -98,16 +98,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(408, 449);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(436, 462);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // idLabel
             // 
             this.idLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(3, 15);
+            this.idLabel.Location = new System.Drawing.Point(3, 18);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(198, 13);
+            this.idLabel.Size = new System.Drawing.Size(212, 13);
             this.idLabel.TabIndex = 0;
             this.idLabel.Text = "ID";
             this.idLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,9 +116,9 @@
             // 
             this.nameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(3, 57);
+            this.nameLabel.Location = new System.Drawing.Point(3, 67);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(198, 13);
+            this.nameLabel.Size = new System.Drawing.Size(212, 13);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Название";
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,9 +127,9 @@
             // 
             this.cpuNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cpuNameLabel.AutoSize = true;
-            this.cpuNameLabel.Location = new System.Drawing.Point(3, 103);
+            this.cpuNameLabel.Location = new System.Drawing.Point(3, 116);
             this.cpuNameLabel.Name = "cpuNameLabel";
-            this.cpuNameLabel.Size = new System.Drawing.Size(198, 13);
+            this.cpuNameLabel.Size = new System.Drawing.Size(212, 13);
             this.cpuNameLabel.TabIndex = 2;
             this.cpuNameLabel.Text = "Название процессора";
             this.cpuNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,9 +138,9 @@
             // 
             this.gpuNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.gpuNameLabel.AutoSize = true;
-            this.gpuNameLabel.Location = new System.Drawing.Point(3, 153);
+            this.gpuNameLabel.Location = new System.Drawing.Point(3, 166);
             this.gpuNameLabel.Name = "gpuNameLabel";
-            this.gpuNameLabel.Size = new System.Drawing.Size(198, 13);
+            this.gpuNameLabel.Size = new System.Drawing.Size(212, 13);
             this.gpuNameLabel.TabIndex = 3;
             this.gpuNameLabel.Text = "Название видеокарты";
             this.gpuNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,9 +149,9 @@
             // 
             this.motherLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.motherLabel.AutoSize = true;
-            this.motherLabel.Location = new System.Drawing.Point(3, 201);
+            this.motherLabel.Location = new System.Drawing.Point(3, 214);
             this.motherLabel.Name = "motherLabel";
-            this.motherLabel.Size = new System.Drawing.Size(198, 13);
+            this.motherLabel.Size = new System.Drawing.Size(212, 13);
             this.motherLabel.TabIndex = 4;
             this.motherLabel.Text = "Материнская плата";
             this.motherLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -160,9 +160,9 @@
             // 
             this.powerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.powerLabel.AutoSize = true;
-            this.powerLabel.Location = new System.Drawing.Point(3, 248);
+            this.powerLabel.Location = new System.Drawing.Point(3, 261);
             this.powerLabel.Name = "powerLabel";
-            this.powerLabel.Size = new System.Drawing.Size(198, 13);
+            this.powerLabel.Size = new System.Drawing.Size(212, 13);
             this.powerLabel.TabIndex = 5;
             this.powerLabel.Text = "Мощность блока питания";
             this.powerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -171,9 +171,9 @@
             // 
             this.memoryLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.memoryLabel.AutoSize = true;
-            this.memoryLabel.Location = new System.Drawing.Point(3, 292);
+            this.memoryLabel.Location = new System.Drawing.Point(3, 305);
             this.memoryLabel.Name = "memoryLabel";
-            this.memoryLabel.Size = new System.Drawing.Size(198, 13);
+            this.memoryLabel.Size = new System.Drawing.Size(212, 13);
             this.memoryLabel.TabIndex = 6;
             this.memoryLabel.Text = "Общая память компьютера";
             this.memoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,9 +182,9 @@
             // 
             this.ssdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ssdLabel.AutoSize = true;
-            this.ssdLabel.Location = new System.Drawing.Point(3, 337);
+            this.ssdLabel.Location = new System.Drawing.Point(3, 350);
             this.ssdLabel.Name = "ssdLabel";
-            this.ssdLabel.Size = new System.Drawing.Size(198, 13);
+            this.ssdLabel.Size = new System.Drawing.Size(212, 13);
             this.ssdLabel.TabIndex = 7;
             this.ssdLabel.Text = "Наличие ssd";
             this.ssdLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -193,9 +193,9 @@
             // 
             this.hddLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.hddLabel.AutoSize = true;
-            this.hddLabel.Location = new System.Drawing.Point(3, 383);
+            this.hddLabel.Location = new System.Drawing.Point(3, 396);
             this.hddLabel.Name = "hddLabel";
-            this.hddLabel.Size = new System.Drawing.Size(198, 13);
+            this.hddLabel.Size = new System.Drawing.Size(212, 13);
             this.hddLabel.TabIndex = 8;
             this.hddLabel.Text = "Наличие hdd";
             this.hddLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,9 +204,9 @@
             // 
             this.oslabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.oslabel.AutoSize = true;
-            this.oslabel.Location = new System.Drawing.Point(3, 424);
+            this.oslabel.Location = new System.Drawing.Point(3, 437);
             this.oslabel.Name = "oslabel";
-            this.oslabel.Size = new System.Drawing.Size(198, 13);
+            this.oslabel.Size = new System.Drawing.Size(212, 13);
             this.oslabel.TabIndex = 9;
             this.oslabel.Text = "Наличие операционной системы";
             this.oslabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -214,55 +214,55 @@
             // id
             // 
             this.id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.id.Location = new System.Drawing.Point(207, 11);
+            this.id.Location = new System.Drawing.Point(221, 15);
             this.id.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(198, 20);
+            this.id.Size = new System.Drawing.Size(212, 20);
             this.id.TabIndex = 10;
             // 
             // name
             // 
             this.name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.name.Location = new System.Drawing.Point(207, 53);
+            this.name.Location = new System.Drawing.Point(221, 63);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(198, 20);
+            this.name.Size = new System.Drawing.Size(212, 20);
             this.name.TabIndex = 13;
             // 
             // cpuName
             // 
             this.cpuName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cpuName.Location = new System.Drawing.Point(207, 99);
+            this.cpuName.Location = new System.Drawing.Point(221, 112);
             this.cpuName.Name = "cpuName";
-            this.cpuName.Size = new System.Drawing.Size(198, 20);
+            this.cpuName.Size = new System.Drawing.Size(212, 20);
             this.cpuName.TabIndex = 14;
             // 
             // gpuName
             // 
             this.gpuName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.gpuName.Location = new System.Drawing.Point(207, 149);
+            this.gpuName.Location = new System.Drawing.Point(221, 162);
             this.gpuName.Name = "gpuName";
-            this.gpuName.Size = new System.Drawing.Size(198, 20);
+            this.gpuName.Size = new System.Drawing.Size(212, 20);
             this.gpuName.TabIndex = 15;
             // 
             // mother
             // 
             this.mother.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.mother.Location = new System.Drawing.Point(207, 198);
+            this.mother.Location = new System.Drawing.Point(221, 211);
             this.mother.Name = "mother";
-            this.mother.Size = new System.Drawing.Size(198, 20);
+            this.mother.Size = new System.Drawing.Size(212, 20);
             this.mother.TabIndex = 16;
             // 
             // ssd
             // 
             this.ssd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ssd.AutoSize = true;
-            this.ssd.Location = new System.Drawing.Point(207, 335);
+            this.ssd.Location = new System.Drawing.Point(221, 348);
             this.ssd.Name = "ssd";
-            this.ssd.Size = new System.Drawing.Size(198, 17);
+            this.ssd.Size = new System.Drawing.Size(212, 17);
             this.ssd.TabIndex = 17;
             this.ssd.Text = "есть такое";
             this.ssd.UseVisualStyleBackColor = true;
@@ -271,9 +271,9 @@
             // 
             this.hdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.hdd.AutoSize = true;
-            this.hdd.Location = new System.Drawing.Point(207, 381);
+            this.hdd.Location = new System.Drawing.Point(221, 394);
             this.hdd.Name = "hdd";
-            this.hdd.Size = new System.Drawing.Size(198, 17);
+            this.hdd.Size = new System.Drawing.Size(212, 17);
             this.hdd.TabIndex = 18;
             this.hdd.Text = "есть такое";
             this.hdd.UseVisualStyleBackColor = true;
@@ -282,9 +282,9 @@
             // 
             this.os.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.os.AutoSize = true;
-            this.os.Location = new System.Drawing.Point(207, 422);
+            this.os.Location = new System.Drawing.Point(221, 435);
             this.os.Name = "os";
-            this.os.Size = new System.Drawing.Size(198, 17);
+            this.os.Size = new System.Drawing.Size(212, 17);
             this.os.TabIndex = 19;
             this.os.Text = "есть такое";
             this.os.UseVisualStyleBackColor = true;
@@ -292,33 +292,33 @@
             // power
             // 
             this.power.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.power.Location = new System.Drawing.Point(207, 244);
+            this.power.Location = new System.Drawing.Point(221, 257);
             this.power.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.power.Name = "power";
-            this.power.Size = new System.Drawing.Size(198, 20);
+            this.power.Size = new System.Drawing.Size(212, 20);
             this.power.TabIndex = 20;
             // 
             // memory
             // 
             this.memory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.memory.Location = new System.Drawing.Point(207, 289);
+            this.memory.Location = new System.Drawing.Point(221, 302);
             this.memory.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.memory.Name = "memory";
-            this.memory.Size = new System.Drawing.Size(198, 20);
+            this.memory.Size = new System.Drawing.Size(212, 20);
             this.memory.TabIndex = 21;
             // 
             // cancelButton
             // 
             this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancelButton.Location = new System.Drawing.Point(219, 469);
+            this.cancelButton.Location = new System.Drawing.Point(247, 482);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(201, 23);
             this.cancelButton.TabIndex = 1;
@@ -329,7 +329,7 @@
             // saveButton
             // 
             this.saveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.saveButton.Location = new System.Drawing.Point(12, 469);
+            this.saveButton.Location = new System.Drawing.Point(12, 482);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(201, 23);
             this.saveButton.TabIndex = 2;
@@ -341,13 +341,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 504);
+            this.ClientSize = new System.Drawing.Size(460, 517);
             this.ControlBox = false;
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(450, 520);
             this.Name = "EditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактирование";
