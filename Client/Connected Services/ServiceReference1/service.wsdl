@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Server" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IContract_AddComputer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddComputer" />
+  </wsdl:message>
+  <wsdl:message name="IContract_AddComputer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddComputerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContract_AddComputer_SQLErrorFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Server" name="detail" element="q1:SQLError" />
+  </wsdl:message>
+  <wsdl:message name="IContract_AddComputer_ValueErrorFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Server" name="detail" element="q2:ValueError" />
+  </wsdl:message>
+  <wsdl:message name="IContract_UpdateComputer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateComputer" />
+  </wsdl:message>
+  <wsdl:message name="IContract_UpdateComputer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateComputerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContract_UpdateComputer_SQLErrorFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Server" name="detail" element="q3:SQLError" />
+  </wsdl:message>
+  <wsdl:message name="IContract_UpdateComputer_ValueErrorFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Server" name="detail" element="q4:ValueError" />
+  </wsdl:message>
+  <wsdl:message name="IContract_GetComputers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComputers" />
+  </wsdl:message>
+  <wsdl:message name="IContract_GetComputers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComputersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IContract_GetComputers_SQLErrorFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Server" name="detail" element="q5:SQLError" />
+  </wsdl:message>
+  <wsdl:message name="IContract_DeleteComputer_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteComputer" />
+  </wsdl:message>
+  <wsdl:message name="IContract_DeleteComputer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteComputerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IContract">
+    <wsdl:operation name="AddComputer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContract/AddComputer" message="tns:IContract_AddComputer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContract/AddComputerResponse" message="tns:IContract_AddComputer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContract/AddComputerSQLErrorFault" name="SQLErrorFault" message="tns:IContract_AddComputer_SQLErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContract/AddComputerValueErrorFault" name="ValueErrorFault" message="tns:IContract_AddComputer_ValueErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComputer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContract/UpdateComputer" message="tns:IContract_UpdateComputer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContract/UpdateComputerResponse" message="tns:IContract_UpdateComputer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContract/UpdateComputerSQLErrorFault" name="SQLErrorFault" message="tns:IContract_UpdateComputer_SQLErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContract/UpdateComputerValueErrorFault" name="ValueErrorFault" message="tns:IContract_UpdateComputer_ValueErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComputers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContract/GetComputers" message="tns:IContract_GetComputers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContract/GetComputersResponse" message="tns:IContract_GetComputers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IContract/GetComputersSQLErrorFault" name="SQLErrorFault" message="tns:IContract_GetComputers_SQLErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComputer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IContract/DeleteComputer" message="tns:IContract_DeleteComputer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IContract/DeleteComputerResponse" message="tns:IContract_DeleteComputer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IContract" type="tns:IContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddComputer">
+      <soap:operation soapAction="http://tempuri.org/IContract/AddComputer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SQLErrorFault">
+        <soap:fault use="literal" name="SQLErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValueErrorFault">
+        <soap:fault use="literal" name="ValueErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComputer">
+      <soap:operation soapAction="http://tempuri.org/IContract/UpdateComputer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SQLErrorFault">
+        <soap:fault use="literal" name="SQLErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ValueErrorFault">
+        <soap:fault use="literal" name="ValueErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetComputers">
+      <soap:operation soapAction="http://tempuri.org/IContract/GetComputers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SQLErrorFault">
+        <soap:fault use="literal" name="SQLErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComputer">
+      <soap:operation soapAction="http://tempuri.org/IContract/DeleteComputer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IContract" binding="tns:BasicHttpBinding_IContract">
+      <soap:address location="http://localhost:9061/WCF9061/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

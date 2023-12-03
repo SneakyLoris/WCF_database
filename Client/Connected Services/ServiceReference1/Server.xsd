@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Server" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Server" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Computer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CPU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GPU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HDD" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Memory" type="xs:int" />
+      <xs:element minOccurs="0" name="Motherboard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OS" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Power" type="xs:int" />
+      <xs:element minOccurs="0" name="SSD" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Computer" nillable="true" type="tns:Computer" />
+  <xs:complexType name="SQLError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Command" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Connection" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SQLError" nillable="true" type="tns:SQLError" />
+  <xs:complexType name="ValueError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="haveToBe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nameValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValueError" nillable="true" type="tns:ValueError" />
+  <xs:complexType name="ArrayOfComputer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Computer" nillable="true" type="tns:Computer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComputer" nillable="true" type="tns:ArrayOfComputer" />
+</xs:schema>
