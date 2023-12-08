@@ -10,7 +10,7 @@ namespace Server
 {
     public class Service : IContract
     {
-        private string connSql = @"Data Source = localhost\SQLEXPRESS;Initial Catalog = 'computers';Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private string connSql = @"Data Source = DESKTOP-V4RVBT2;Initial Catalog = 'computers';Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         // DESKTOP-V4RVBT2
         // localhost\SQLEXPRESS
 
